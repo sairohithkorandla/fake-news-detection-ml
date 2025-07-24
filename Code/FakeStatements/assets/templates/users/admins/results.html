@@ -1,0 +1,119 @@
+{% extends 'admins/adminbase.html'%}
+{%load static%}
+{%block contents%}
+
+<header class="masthead text-center text-white">
+    <div class="masthead-content">
+      <div class="container">
+      <h5>Users Search Results</h5>
+<p> <table border="2px">
+            <tr>
+                <th style="color: darkblue">S.No</th>
+                <th style="color: darkblue">Name</th>
+                <th style="color:darkblue">Email</th>
+                <th style="color:darkblue">Statement</th>
+                <th style="color:darkblue">Label</th>
+
+                <th style="color:darkblue">LG C</th>
+                <th style="color: burlywood">Test Date</th>
+
+
+
+
+            </tr>
+            {% for i in objects %}
+            <tr style="color:WHITE">
+            <td >{{i.id}}</td>
+            <td>{{i.username}}</td>
+            <td>{{i.email}}</td>
+            <td>{{i.statement}}</td>
+            <td>{{i.label}}</td>
+
+            <td>{{i.logisticregression}}%</td>
+            <td>{{i.cdate}}</td>
+
+
+            {% endfor %}
+        </table>
+                </p>
+
+
+      </div>
+    </div>
+    <div class="bg-circle-1 bg-circle"></div>
+    <div class="bg-circle-2 bg-circle"></div>
+    <div class="bg-circle-3 bg-circle"></div>
+    <div class="bg-circle-4 bg-circle"></div>
+  </header>
+                           <section>
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 order-lg-2">
+          <div class="p-5">
+            <img class="img-fluid rounded-circle" src="{%static 'img/Data-Preprocessing.jpg'%}" alt="">
+          </div>
+        </div>
+        <div class="col-lg-6 order-lg-1">
+          <div class="p-5">
+            <h2 class="display-4">Data Pre-Processing</h2>
+            <p>Before actually applying the artificial intelligence algorithms to the data, it should be pre-processed. First of all it was decided to use only the statements themselves for classification purposes. This means that none of the metadata provided is used for classification. The classification algorithm might actually be improved in the future by taking into account this metadata.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <div class="p-5">
+            <img class="img-fluid rounded-circle" src="{%static 'img/fknews.jpg'%}" alt="">
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="p-5">
+            <h2 class="display-4">Social Media and Fake News</h2>
+            <p>The second session of my social media class dealt with the topic of fake news, one of the most hotly-debated socio-political topics of recent years. Websites containing hoaxes and misleading information pop up across the Internet and are often shared on social media to increase their reach – by both human users and artificial bots, deliberately or unintentionally spreading disinformation. In this session, we talked about critical consumption, and how we can make good choices about what we give our attention to, about where and how we seek out expertise and perspective, about how we process what we read and view.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 order-lg-2">
+          <div class="p-5">
+            <img class="img-fluid rounded-circle" src="{%static 'img/profake.jpg'%}" alt="">
+          </div>
+        </div>
+        <div class="col-lg-6 order-lg-1">
+          <div class="p-5">
+            <h2 class="display-4">Do we have a problem with fake news?</h2>
+            <p>Fake news is a politicized and controversial term, used both to criticize mainstream media and to refer to problematic content online.
+
+As I live in the US, and am teaching this is class at a German university, we were specifically looking at the situation in these two countries. Contrasting the two countries helped us recognize fake news as a global phenomenon with regional differences.
+
+Some data points from statista.com:
+            <ul>
+              <li>54% of US Americans see fake news as a significant problem. </li>
+              <li>71% of US Americans see it as a serious problem that ‘outside groups’ are planting fake news on social media. </li>
+              <li>74% of Germans strongly or partly agree with the statement that fake news is a real threat to society. </li>
+              <li>41% of US Americans use social media daily to consume news. </li>
+              <li>65% of Germans describe the information in German media as generally credible. </li>
+
+            </ul>
+
+
+
+
+Asked to describe their level of trust in the mass media to report the news fully, accurately and fairly, 30% of US Americans stated ‘not very much’ and 21% stated ‘none at all’.
+While the problem is perceived as significant in both countries, Germans have a higher trust in traditional mass media, and consume overall less news via social media.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{%endblock%}

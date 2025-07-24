@@ -1,0 +1,6 @@
+pip install gunicorn==19.9.0
+pip install pandas==0.25.0
+pip install requests==2.22.0
+pip install scikit-learn==0.21.3
+pip install scipy==1.3.1
+pip install python-dateutil==2.8.1
